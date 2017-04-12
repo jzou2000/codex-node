@@ -1,7 +1,10 @@
 var express = require('express')
 var app = express()
 
-app.get('/', function(req, res) {
+app.use(express.static('public'))
+
+
+app.get('/rest', function(req, res) {
     res.send('hello world')
 })
 
