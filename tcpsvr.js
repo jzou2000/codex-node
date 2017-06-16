@@ -1,5 +1,5 @@
 const net = require('net');
-
+const express = require('express')
 
 
 const server = net.createServer()
@@ -42,3 +42,12 @@ const server = net.createServer()
     })
 });
 
+
+var app = express();
+app.get('/', (req, res) => {
+    res.send('Hello, world');
+});
+
+app.listen(8660, () => {
+    console.log('Web server listens at port 8660');
+});
